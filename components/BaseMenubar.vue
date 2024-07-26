@@ -11,7 +11,12 @@
       </div>
     </template>
     <template #item="{ item, props }">
-      <a v-ripple class="flex items-center" v-bind="props.action">
+      <a
+        v-ripple
+        class="flex items-center"
+        v-bind="props.action"
+        :href="item.url"
+      >
         {{ item.label }}
       </a>
     </template>
@@ -25,15 +30,19 @@ import Logo from "~/assets/logo/logo.svg";
 const items = ref([
   {
     label: "Home",
+    url: "/",
   },
   {
     label: "Service",
+    url: "/service",
   },
   {
     label: "Portfolio",
+    url: "/portofolio",
   },
   {
     label: "About",
+    url: "/about",
   },
 ]);
 </script>
